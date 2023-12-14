@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter5</title>
+    <!-- 기본 -->
+    <style>
+        @font-face {
+        font-family: 'IAMAPLAYER';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face{
+        font-family:'bitbit';
+        src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+        }
+
+        * {
+            margin : 0;
+            padding: 0;
+        }
+        body {font-family: sans-serif; background-image: url("image/back1.jpg");}
+        li {list-style: none;}
+        a { text-decoration: none; color : black}
+        img { border: 0;}
+    </style>
+    <!-- 헤더 -->
+     <style>
+        #main_header {
+            width: 960px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+            font-family: 'IAMAPLAYER';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+        }
+        #main_header img {
+            width : 100px;
+            margin-top: 35px;
+        }
+        #main_header > #title {
+            position :absolute;
+            left :110px;
+            top : 30px;
+            color : white;
+            font-size: 25px;
+            font-family: 'IAMAPLAYER';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+        }
+        #main_header > #main_gnb {
+            position: absolute;
+            right : 0;
+            top : 0;
+            
+        }
+        #main_header > #main_lnb {
+            position:absolute;
+            right : 0;
+            bottom: 10px;
+        }
+     </style>
+     <!-- 메뉴(1) -->
+     <style>
+        #main_gnb > ul {overflow: hidden;}
+        #main_gnb > ul > li {float: left;}
+        #main_gnb > ul > li > a { 
+            display: block;
+            padding : 2px 18px;
+            color: lavender;
+            border-bottom: 3px solid rgb(197, 130, 130);
+            font-weight: bold;
+        }
+        #main_gnb > ul > li > a:hover{
+            background: lavender;
+            color :black
+        }
+        
+     </style>
+     <!-- 메뉴(2) -->
+     <style>
+        #main_lnb > ul { overflow: hidden;}
+        #main_lnb > ul > li {float : left;}
+        #main_lnb > ul > li > a {
+            display: block;
+            padding : 10px 20px;
+            border: 3px solid rgb(197, 130, 130);
+            background-color: lavender;
+            font-weight: bold;
+        }
+        #main_lnb > ul > li > a:hover{
+            background: black;
+            color : white;
+        }
+        #main_lnb > ul > li:first-child > a {border-radius: 10px 0 0 10px;}
+        #main_lnb > ul > li:last-child > a {border-radius: 0 10px 10px 0;}
+     </style>
+     <!-- 콘텐츠 -->
+     <style>
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #content > #main_section {
+            width: 750px;
+            float: left;
+        }
+        #content > #main_asdie {
+            width: 200px;
+            float: right;
+        }
+     </style>
+     <!-- 본문 -->
+     <style>
+        #main_section > article.main_article1, .main_article2, .main_article3, .main_article4 {
+            margin-bottom: 40px;
+            padding : 20px;
+            border : 5px solid rgb(197, 130, 130);
+            border-radius: 15px;
+            margin-right : 30px;
+            line-height: 2;
+            background-color: lavender;
+            opacity: 0.9;
+            font-family:'bitbit';
+        src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+            
+        }
+        #main_section .main_article p {
+            margin-left: 20px;
+            font-weight: bold;
+            
+        }
+        #main_section .main_article h1 {
+            font-size: 30px;
+            margin-top: -20px;
+        }
+        
+     </style>
+     <!-- 사이드 -->
+     <style>
+        /* 첫번째 탭 */
+        input:nth-of-type(1) {display: none;}
+        input:nth-of-type(1) ~ div:nth-of-type(1) {display: none;}
+        input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+
+        /* 두번째 탭 */
+        input:nth-of-type(2) {display: none;}
+        input:nth-of-type(2) ~ div:nth-of-type(2) {display: none;}
+        input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+
+        /* 탭 모양 구성 */
+        section.buttons {overflow: hidden;}
+        section.buttons > label {
+            display: block;
+            float: left;
+            width:105px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            font-weight: bold;
+            border : 3px solid rgb(197, 130, 130);
+            background: white;
+            color :black;
+            font-family: 'IAMAPLAYER';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+        }
+        input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1){
+            background: black;
+            color: white;
+        }
+        input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2){
+            background :black;
+            color:white;
+        }
+     </style>
+     <!-- 목록 -->
+     <style>
+        
+        .item {
+            overflow: hidden;
+            padding :10px;
+            border : 3px solid rgb(197, 130, 130);
+            border-top : none;
+            height: 200px;
+            position :relative;
+            background-color: rgb(235, 220, 235);
+            font-family: 'IAMAPLAYER';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    
+        }
+        .item p {
+            position: absolute;
+            bottom : 2px;
+            right : 2px;
+        }
+        .item strong {
+            color : black;
+            margin-left: 24px;
+            margin-top : 10px;
+            font-family:'bitbit';
+        src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+        }
+        .item img {
+            position: absolute;
+            width: 100px;
+            top: 50px;
+            left: 55px;
+        }
+        .thumbnail {
+            float : left;
+        }
+        .description {
+            float : left;
+            margin-left :10px;
+            text-align: center;
+        }
+        .description > strong {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+     </style>
+     <!-- 푸터 -->
+     <style>
+        #main_footer {
+            width: 960px;
+            margin : 0 auto;
+            margin-bottom:10px;
+            box-sizing: border-box;
+            padding :10px;
+            opacity: 0.8;
+            text-align: center;
+            background-color:azure;
+        }
+        #main_footer img {
+            width: 100px;
+        }
+     </style>
+</head>
+<body>
+    <header id ="main_header">
+        <img src="/수업/image/banner.png" alt="">
+        <div id = "title">
+            <h1>2023년 12월</h1>
+            <h2>출시 예정 게임</h2>    
+        </div>
+        <nav id ="main_gnb">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">설문조사</a></li>
+            </ul>
+        </nav>
+        <nav id ="main_lnb">
+            <ul>
+                <li><a href="#PS5">PS5</a></li>
+                <li><a href="#XBOX">XBOX Series</a></li>
+                <li><a href="#SWITCH">SWITCH</a></li>
+                <li><a href="#PC">PC</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <div id ="content">
+        <section id = "main_section">
+            <article class="main_article1">
+                <h1 id="PS5">PS5</h1>
+                <p>1. 사이버펑크 2077 얼티밋 에디션 한글판 (PS5, 패키지디스크)</p>
+                <p>2. 아바타: 프론티어 오브 판도라 한글판 (PS5, 리미티드에디션/패키지디스크)</p>
+                <p>3. 풋볼 매니저 2024 한글판 (PS5, 패키지디스크)</p>
+                <p>4. 고스트 러너 2 한글판 (PS5, 패키지디스크)</p>
+                <p>5. 발더스 게이트 3 일본판 (PS5, 패키지디스크/해외구매)	</p>
+            </article>
+            <article class="main_article2">
+                <h1 id ="XBOX">XBOX Series </h1>
+                <p>1. 아바타: 프론티어 오브 판도라 한글판 (XBOX Series, 다운로드코드)</p>
+                <p>2. 아바타: 프론티어 오브 판도라 한글판 (XBOX Series, 골드에디션/다운로드코드)</p>
+                <p>3. 아바타: 프론티어 오브 판도라 한글판 (XBOX Series, 얼티밋에디션/다운로드코드)</p>
+            </article>
+            <article class="main_article3">
+                <h1 id="SWITCH">SWITCH</h1>
+                <p>1. 드래곤 퀘스트 몬스터즈 3: 마족 왕자와 엘프의 여행 한글판 (SWITCH, 패키지칩)</p>
+                <p>2. 배트맨: 아캄 트릴로지 한글판 (SWITCH, 패키지칩)</p>
+                <p>3. 스미코구라시 다 함께 리듬파티 한글판 (SWITCH, 패키지칩)</p>
+                <p>4. 우리집 트레이닝 한글판 (SWITCH, 패키지칩)</p>
+            </article>
+            <article class="main_article4">
+                <h1 id ="PC">PC</h1>
+                <p>1. 아바타: 프론티어 오브 판도라 한글판 (PC)</p>
+            </article>
+        </section>
+        <aside id = "main_aside">
+            <input type="radio" name="tab" id="first" checked = "checked" />
+            <input type="radio" name="tab" id="second" />
+            <section class = "buttons"> 
+                <label for="first">TOP 4</label>
+                <label for="second">입고 예정</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="https://prod.danawa.com/info/?pcode=30131198">
+                        <div class="thumbnail">
+                            <img src="image/test1.png">
+                        </div>
+                        <div class="description">
+                            <strong>사이버펑크 2077</strong><p>출시일 : 2023.12.05</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="https://prod.danawa.com/info/?pcode=29343281">
+                        <div class="thumbnail">
+                            <img src="image/test2.png">
+                        </div>
+                        <div class="description">
+                            <strong>풋볼매니저</strong><p>출시일 : 2023.12.07</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="https://prod.danawa.com/info/?pcode=30271286">
+                        <div class="thumbnail">
+                            <img src="image/test3.png">
+                        </div>
+                        <div class="description">
+                            <strong>고스트러너</strong><p>출시일 : 2023.12.13</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="https://prod.danawa.com/info/?pcode=30300869">
+                        <div class="thumbnail">
+                            <img src="image/test4.png">
+                        </div>
+                        <div class="description">
+                            <strong>발더스 게이트</strong><p>출시일 : 2023.12.21</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="image/ex1.png">
+                        </div>
+                        <div class="description">
+                            <strong>아바타</strong><p>입고일 : 2023.12.06</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="image/ex1.png">
+                        </div>
+                        <div class="description">
+                            <strong>아바타 골드에디션</strong><p>입고일 : 2023.12.08</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="image/ex1.png">
+                        </div>
+                        <div class="description">
+                            <strong>아바타 얼티밋에디션</strong><p>입고일 : 2023.12.11</p>
+                        </div>
+                    </a></li>
+                    
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <img src="image/F1.png" alt="">
+        <img src="image/F2.png" alt="">
+        <h3>Copyright by Hyeon-gi Choi.</h3>
+        <address>For more information, contact schentea@gmail.com</address>
+    </footer>
+</body> 
+</html>
