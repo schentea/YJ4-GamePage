@@ -21,7 +21,7 @@
             margin : 0;
             padding: 0;
         }
-        body {font-family: sans-serif; background-image: url("image/back1.jpg");}
+        body {font-family: sans-serif; }
         li {list-style: none;}
         a { text-decoration: none; color : black}
         img { border: 0;}
@@ -29,25 +29,26 @@
     <!-- 헤더 -->
      <style>
         #main_header {
-            width: 960px;
+            width: 100%;
             margin: 0 auto;
             height: 160px;
             position: relative;
             font-family: 'IAMAPLAYER';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
         }
         #main_header img {
-            width : 100px;
+            width : 150px;
             margin-top: 35px;
+            margin-left: 10px;
         }
         #main_header > #title {
             position :absolute;
-            left :110px;
+            left: 165px;
             top : 30px;
-            color : white;
-            font-size: 25px;
+            color : black;
+            font-size: 48px;
             font-family: 'IAMAPLAYER';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
         }
         #main_header > #main_gnb {
             position: absolute;
@@ -99,44 +100,106 @@
      <!-- 콘텐츠 -->
      <style>
         #content {
-            width: 960px;
+            width: 100%;
             margin: 0 auto;
             overflow: hidden;
         }
         #content > #main_section {
-            width: 750px;
+            width: 85%;
             float: left;
         }
         #content > #main_asdie {
-            width: 200px;
+            width: 15%;
             float: right;
         }
      </style>
      <!-- 본문 -->
      <style>
-        #main_section > article.main_article1, .main_article2, .main_article3, .main_article4 {
+        #main_section > article.main_article1{
             margin-bottom: 40px;
             padding : 20px;
-            border : 5px solid rgb(197, 130, 130);
-            border-radius: 15px;
             margin-right : 30px;
-            line-height: 2;
-            background-color: lavender;
+            line-height: 1.7;
             opacity: 0.9;
             font-family:'bitbit';
-        src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+            src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
             
         }
-        #main_section .main_article p {
+       
+        #main_section .main_article1 h1 {
+            font-size: 38px;
+            
+            
+        }
+        #main_section .main_article1 .main_div {
+            border-radius: 30px;
+            background-color: rgb(190, 190, 190);
+            margin-bottom: 100px;
+            width: 100%;
+            height: 1000px;
+        }
+        #main_section .main_article1 .main_div div{
+            display: inline-block;
+        }
+        #main_section .main_article1 .main_div div:first-child{
+            width: 25%;
+            height: 1000px;
+            float: left;
+            position: relative;
+            background-color: black;
+            border-radius: 30px;
+        }
+        #main_section .main_article1 .main_div div:first-child img{
+            position: relative;
+            width: 100%;
+            height: 1000px;
+            transition: opacity 0.3s;
+            border-radius: 30px;
+        }
+        .greview {
+            width: 100%;
+            font-size: 28px;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+            
+        }
+        #main_section .main_article1 .main_div div:first-child img:hover {
+            opacity: 0.3;
+        }
+        #main_section .main_article1 .main_div div:first-child img:hover ~ .greview {
+            display: block;
+        }
+        #main_section .main_article1 .main_div div:last-child{
+            width: 69%;
+            height: 1000px;
+            float: right;
+        }
+        #main_section .main_article1 .main_div div:last-child ul {
+            font-size: 36px;
             margin-left: 20px;
-            font-weight: bold;
-            
+            margin-top: 20px;
         }
-        #main_section .main_article h1 {
-            font-size: 30px;
-            margin-top: -20px;
+        #main_section .main_article1 .main_div div:last-child ul li{
+            font-size: 24px;
+            margin-left: 50px;
+            list-style:decimal;
         }
-        
+        #main_section .main_article1 .main_div div:last-child img {
+            width: 400px;
+            height: 280px;
+            margin: 20px;
+        }
+        #main_section .main_article1 .main_div div:last-child .screenShot {
+            font-size: 28px;
+            text-align: center;
+            margin-top: 40px;
+        }
      </style>
      <!-- 사이드 -->
      <style>
@@ -165,7 +228,7 @@
             background: white;
             color :black;
             font-family: 'IAMAPLAYER';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
         }
         input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1){
             background: black;
@@ -243,10 +306,9 @@
 </head>
 <body>
     <header id ="main_header">
-        <img src="/수업/image/banner.png" alt="">
+        <img src="image/banner.png" alt="">
         <div id = "title">
-            <h1>2023년 12월</h1>
-            <h2>출시 예정 게임</h2>    
+            <h1>G-Review</h1> 
         </div>
         <nav id ="main_gnb">
             <ul>
@@ -269,29 +331,62 @@
     <div id ="content">
         <section id = "main_section">
             <article class="main_article1">
-                <h1 id="PS5">PS5</h1>
-                <p>1. 사이버펑크 2077 얼티밋 에디션 한글판 (PS5, 패키지디스크)</p>
-                <p>2. 아바타: 프론티어 오브 판도라 한글판 (PS5, 리미티드에디션/패키지디스크)</p>
-                <p>3. 풋볼 매니저 2024 한글판 (PS5, 패키지디스크)</p>
-                <p>4. 고스트 러너 2 한글판 (PS5, 패키지디스크)</p>
-                <p>5. 발더스 게이트 3 일본판 (PS5, 패키지디스크/해외구매)	</p>
-            </article>
-            <article class="main_article2">
-                <h1 id ="XBOX">XBOX Series </h1>
-                <p>1. 아바타: 프론티어 오브 판도라 한글판 (XBOX Series, 다운로드코드)</p>
-                <p>2. 아바타: 프론티어 오브 판도라 한글판 (XBOX Series, 골드에디션/다운로드코드)</p>
-                <p>3. 아바타: 프론티어 오브 판도라 한글판 (XBOX Series, 얼티밋에디션/다운로드코드)</p>
-            </article>
-            <article class="main_article3">
-                <h1 id="SWITCH">SWITCH</h1>
-                <p>1. 드래곤 퀘스트 몬스터즈 3: 마족 왕자와 엘프의 여행 한글판 (SWITCH, 패키지칩)</p>
-                <p>2. 배트맨: 아캄 트릴로지 한글판 (SWITCH, 패키지칩)</p>
-                <p>3. 스미코구라시 다 함께 리듬파티 한글판 (SWITCH, 패키지칩)</p>
-                <p>4. 우리집 트레이닝 한글판 (SWITCH, 패키지칩)</p>
-            </article>
-            <article class="main_article4">
-                <h1 id ="PC">PC</h1>
-                <p>1. 아바타: 프론티어 오브 판도라 한글판 (PC)</p>
+                <h1 id="PS5">PC</h1>
+                <div class ="main_div">
+                    <div>
+                        <img src="image/ex2.png">
+                        <p class ="greview">
+                        "많은 사람들이 지겨워하는 역사와 문명이라는 주제로
+                        &nbsp;&nbsp;몰입감 있게 플레이 할 수 있는 <br>
+                        전략 시뮬레이션 게임"</p>
+                    </div>
+                    <div>
+                        <ul>SID MEIER'S CIVILIZATION VI
+                            <i class="fa-solid fa-star fa-2xs" style="color: #FFA500;"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #FFA500;"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #FFA500;"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #FFA500;"></i>
+                            <i class="fa-solid fa-star fa-2xs"></i>
+                            <li>전작에 비해 게임 플레이의 다양화를 시도하려한 흔적이 보이고 실제로도 어느 정도의 성과를 거뒀다.</li>
+                            <li>심시티, 유레카, 시대점수, 자연재해 등 여러가지 생각해야할 요소들이 많아졌다.</li>
+                            <li>싱글플레이시 AI의 행동패턴이 많이 기이하다.</li>
+                            <li>각 문명과 지도자들 사이의 밸런스가 심각하다.</li>
+                        </ul>
+                        <p class ="screenShot">ScreenShot</p>
+                        <img src="image/civex1.png" alt="">
+                        <img src="http://placehold.it/400x280">
+                        <img src="http://placehold.it/400x280">
+                        <br>
+                        <img src="http://placehold.it/400x280">
+                        <img src="http://placehold.it/400x280">
+                        <img src="http://placehold.it/400x280">
+                    </div>
+                </div>
+                <div class ="main_div">
+                    <div>
+                        <img src="image/ex2.png">
+                        <p class ="greview">한줄평<br>
+                        "많은 사람들이 지겨워하는 역사와 문명이라는 주제로
+                        &nbsp;&nbsp;몰입감 있게 플레이 할 수 있는 <br>
+                        전략 시뮬레이션 게임"</p>
+                    </div>
+                    <div>
+                        <ul>SID MEIER'S CIVILIZATION VI
+                            <li>전작에 비해 게임 플레이의 다양화를 시도하려한 흔적이 보이고 실제로도 어느 정도의 성과를 거뒀다</li>
+                            <li>2016. 10. 21 출시</li>
+                            <li>12세 이용가</li>
+                            <li>출시가 65,000 원</li>
+                        </ul>
+                        <p class ="screenShot">ScreenShot</p>
+                        <img src="image/civex1.png" alt="">
+                        <img src="http://placehold.it/400x280">
+                        <img src="http://placehold.it/400x280">
+                        <br>
+                        <img src="http://placehold.it/400x280">
+                        <img src="http://placehold.it/400x280">
+                        <img src="http://placehold.it/400x280">
+                    </div>
+                </div>
             </article>
         </section>
         <aside id = "main_aside">
@@ -374,5 +469,6 @@
         <h3>Copyright by Hyeon-gi Choi.</h3>
         <address>For more information, contact schentea@gmail.com</address>
     </footer>
+    <script src="https://kit.fontawesome.com/f5abf61b8c.js" crossorigin="anonymous"></script>
 </body> 
 </html>

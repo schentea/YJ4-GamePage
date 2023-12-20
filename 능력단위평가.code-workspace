@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "능력단위평가",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "능력단위평가"
+	}
+}
