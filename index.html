@@ -25,6 +25,8 @@
       }
       body {
         font-family: sans-serif;
+        /* background-image: url("image/backImg.png");
+        background-attachment: fixed; */
       }
       li {
         list-style: none;
@@ -43,6 +45,7 @@
         width: 100%;
         margin: 0 auto;
         height: 160px;
+        background-color: aliceblue;
         position: relative;
         font-family: "IAMAPLAYER";
         src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2")
@@ -74,50 +77,27 @@
         bottom: 10px;
       }
     </style>
-    <!-- 메뉴(1) -->
-    <style>
-      #main_gnb > ul {
-        overflow: hidden;
-      }
-      #main_gnb > ul > li {
-        float: left;
-      }
-      #main_gnb > ul > li > a {
-        display: block;
-        padding: 2px 18px;
-        color: lavender;
-        border-bottom: 3px solid rgb(197, 130, 130);
-        font-weight: bold;
-      }
-      #main_gnb > ul > li > a:hover {
-        background: lavender;
-        color: black;
-      }
-    </style>
     <!-- 메뉴(2) -->
     <style>
       #main_lnb > ul {
         overflow: hidden;
+        margin-bottom: 20px;
       }
       #main_lnb > ul > li {
+        font-size: 28px;
+        text-align: center;
+        width: 200px;
         float: left;
+        margin-right: 50px;
       }
       #main_lnb > ul > li > a {
         display: block;
         padding: 10px 20px;
-        border: 3px solid rgb(197, 130, 130);
-        background-color: lavender;
         font-weight: bold;
       }
       #main_lnb > ul > li > a:hover {
         background: black;
         color: white;
-      }
-      #main_lnb > ul > li:first-child > a {
-        border-radius: 10px 0 0 10px;
-      }
-      #main_lnb > ul > li:last-child > a {
-        border-radius: 0 10px 10px 0;
       }
     </style>
     <!-- 콘텐츠 -->
@@ -128,12 +108,7 @@
         overflow: hidden;
       }
       #content > #main_section {
-        width: 85%;
-        float: left;
-      }
-      #content > #main_asdie {
-        width: 15%;
-        float: right;
+        width: 100%;
       }
     </style>
     <!-- 본문 -->
@@ -154,17 +129,19 @@
       }
       #main_section .main_article1 .main_div {
         border-radius: 30px;
-        background-color: rgb(190, 190, 190);
+        background-color: rgb(243, 243, 243);
+        /* background-image: url("image/backImg2.png");
+        background-attachment: fixed; */
         margin-bottom: 100px;
         width: 100%;
-        height: 1000px;
+        height: 900px;
       }
       #main_section .main_article1 .main_div div {
         display: inline-block;
       }
       #main_section .main_article1 .main_div div:first-child {
-        width: 25%;
-        height: 1000px;
+        width: 40%;
+        height: 900px;
         float: left;
         position: relative;
         background-color: black;
@@ -173,7 +150,7 @@
       #main_section .main_article1 .main_div div:first-child img {
         position: relative;
         width: 100%;
-        height: 1000px;
+        height: 900px;
         transition: opacity 0.3s;
         border-radius: 30px;
       }
@@ -201,9 +178,10 @@
         display: block;
       }
       #main_section .main_article1 .main_div div:last-child {
-        width: 69%;
-        height: 1000px;
+        width: 59%;
+        height: 900px;
         float: right;
+        margin-left: 10px;
       }
       #main_section .main_article1 .main_div div:last-child ul {
         font-size: 36px;
@@ -216,121 +194,62 @@
         list-style: decimal;
       }
       #main_section .main_article1 .main_div div:last-child img {
-        width: 400px;
-        height: 260px;
-        margin: 20px;
+        width: 300px;
+        height: 160px;
+        margin: 60px 20px 20px 20px;
       }
       #main_section .main_article1 .main_div div:last-child .screenShot {
         font-size: 28px;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 70px;
       }
-    </style>
-    <!-- 사이드 -->
-    <style>
-      /* 첫번째 탭 */
-      input:nth-of-type(1) {
-        display: none;
-      }
-      input:nth-of-type(1) ~ div:nth-of-type(1) {
-        display: none;
-      }
-      input:nth-of-type(1):checked ~ div:nth-of-type(1) {
-        display: block;
-      }
-
-      /* 두번째 탭 */
-      input:nth-of-type(2) {
-        display: none;
-      }
-      input:nth-of-type(2) ~ div:nth-of-type(2) {
-        display: none;
-      }
-      input:nth-of-type(2):checked ~ div:nth-of-type(2) {
-        display: block;
-      }
-
-      /* 탭 모양 구성 */
-      section.buttons {
+      #main_section #main_article2 .gal {
+        border: 1px solid black;
+        width: 100%;
+        height: 320px;
         overflow: hidden;
-      }
-      section.buttons > label {
-        display: block;
-        float: left;
-        width: 105px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        box-sizing: border-box;
-        font-weight: bold;
-        border: 3px solid rgb(197, 130, 130);
-        background: white;
-        color: black;
-        font-family: "IAMAPLAYER";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2")
-          format("woff2");
-      }
-      input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) {
-        background: black;
-        color: white;
-      }
-      input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
-        background: black;
-        color: white;
-      }
-    </style>
-    <!-- 목록 -->
-    <style>
-      .item {
-        overflow: hidden;
-        padding: 10px;
-        border: 3px solid rgb(197, 130, 130);
-        border-top: none;
-        height: 200px;
+        margin-top: 160px;
         position: relative;
-        background-color: rgb(235, 220, 235);
-        font-family: "IAMAPLAYER";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2")
-          format("woff2");
       }
-      .item p {
-        position: absolute;
-        bottom: 2px;
-        right: 2px;
-      }
-      .item strong {
-        color: black;
-        margin-left: 24px;
-        margin-top: 10px;
-        font-family: "bitbit";
-        src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
-          url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
-      }
-      .item img {
-        position: absolute;
-        width: 100px;
-        top: 50px;
-        left: 55px;
-      }
-      .thumbnail {
-        float: left;
-      }
-      .description {
-        float: left;
-        margin-left: 10px;
+      #main_section #main_article2 .gal p {
+        margin-bottom: 30px;
         text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
       }
-      .description > strong {
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      #main_section #main_article2 .gal img {
+        margin-right: 20px;
+        width: 350px;
+        height: 210px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        z-index: 1;
+      }
+      #main_section #main_article2 .gal img.active {
+        opacity: 1;
+      }
+      #prevBtn,
+      #nextBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 3;
+        background-color: transparent;
+      }
+      #prevBtn {
+        left: 10px;
+      }
+      #nextBtn {
+        right: 10px;
       }
     </style>
     <!-- 푸터 -->
     <style>
       #main_footer {
-        width: 960px;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 10px;
         box-sizing: border-box;
@@ -350,34 +269,24 @@
       <div id="title">
         <h1>G-Review</h1>
       </div>
-      <nav id="main_gnb">
-        <ul>
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
-          <li><a href="#">장바구니</a></li>
-          <li><a href="#">이벤트</a></li>
-          <li><a href="#">설문조사</a></li>
-        </ul>
-      </nav>
       <nav id="main_lnb">
         <ul>
-          <li><a href="#PS5">PS5</a></li>
-          <li><a href="#XBOX">XBOX Series</a></li>
-          <li><a href="#SWITCH">SWITCH</a></li>
-          <li><a href="#PC">PC</a></li>
+          <li><a href="#review">리뷰</a></li>
+          <li><a href="#gallery">갤러리</a></li>
+          <li><a href="#game">추천게임</a></li>
         </ul>
       </nav>
     </header>
     <div id="content">
       <section id="main_section">
         <article class="main_article1">
-          <h1 id="PS5">PC</h1>
           <div class="main_div">
             <div>
               <img src="image/ex2.png" />
               <p class="greview">
-                "많은 사람들이 지겨워하는 역사와 문명이라는 주제로
-                &nbsp;&nbsp;몰입감 있게 플레이 할 수 있는 <br />
+                한줄평<br />
+                "많은 사람들이 지겨워하는 역사와 문명이라는 <br />
+                주제로&nbsp;&nbsp;몰입감 있게 플레이 할 수 있는 <br />
                 전략 시뮬레이션 게임"
               </p>
             </div>
@@ -404,7 +313,6 @@
               <img src="image/civex1.png" alt="" />
               <img src="image/cvex2.png" />
               <img src="image/cvex3.png" />
-              <br />
               <img src="image/cvex4.png" />
               <img src="image/cvex5.png" />
               <img src="image/cvex6.png" />
@@ -437,107 +345,82 @@
               <img src="image/tarex2.png" alt="" />
               <img src="image/tarex3.png" />
               <img src="image/tarex4.png" />
-              <br />
               <img src="image/tarex5.png" />
               <img src="image/tarex6.png" />
               <img src="image/tarex7.png" />
             </div>
           </div>
+          <div class="main_div">
+            <div>
+              <img src="image/witcher.png" />
+              <p class="greview">
+                한줄평<br />
+                "적당한 수준의 자유도에 적당한 수준의 메인 스토리<br />
+                강제성을 섞어서 몰입감 있는 시나리오와 <br />
+                입체적인 캐릭터"
+              </p>
+            </div>
+            <div>
+              <ul>
+                THE WITCHER 3: Wild Hunt
+                <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                <li>메인과 서브 퀘스트를 가리지 않는 높은 퀄리티의 스토리</li>
+                <li>
+                  선택지에 따라 스토리가 달라지는 유저 스스로 만들어가는 이야기
+                </li>
+                <li>적의 종류에 따른 공략법으로 보다 쉬운 전투 가능</li>
+                <li>어색한 전투모션과 적응하기 힘든 오토타겟팅 시스템</li>
+              </ul>
+              <p class="screenShot">ScreenShot</p>
+              <img src="image/w1.jpg" alt="" />
+              <img src="image/w2.jpg" />
+              <img src="image/w3.jpg" />
+              <img src="image/w4.jpg" />
+              <img src="image/w5.jpg" />
+              <img src="image/w6.jpg" />
+            </div>
+          </div>
+        </article>
+        <article id="main_article2">
+          <div class="gal">
+            <p>문명 6</p>
+            <img src="image/civex1.png" />
+            <img src="image/cvex2.png" />
+            <img src="image/cvex3.png" />
+            <img src="image/cvex4.png" />
+            <img src="image/cvex5.png" />
+            <img src="image/cvex6.png" />
+          </div>
+          <div class="gal">
+            <p>Escape From Tarkov</p>
+            <img src="image/tarex2.png" alt="" />
+            <img src="image/tarex3.png" />
+            <img src="image/tarex4.png" />
+            <img src="image/tarex5.png" />
+            <img src="image/tarex6.png" />
+            <img src="image/tarex7.png" />
+          </div>
+          <div class="gal">
+            <p>위쳐3</p>
+            <img src="image/w1.jpg" class="active" />
+            <img src="image/w2.jpg" />
+            <img src="image/w3.jpg" />
+            <img src="image/w4.jpg" />
+            <img src="image/w5.jpg" />
+            <img src="image/w6.jpg" />
+            <img src="image/tarex7.png" />
+            <div id="prevBtn" onclick="changeSlide(-1)">&#10094;</div>
+            <div id="nextBtn" onclick="changeSlide(1)">&#10095;</div>
+          </div>
+        </article>
+        <article id="main_article3">
+          <div></div>
         </article>
       </section>
-      <aside id="main_aside">
-        <input type="radio" name="tab" id="first" checked="checked" />
-        <input type="radio" name="tab" id="second" />
-        <section class="buttons">
-          <label for="first">TOP 4</label>
-          <label for="second">입고 예정</label>
-        </section>
-        <div class="tab_item">
-          <ul>
-            <li class="item">
-              <a href="https://prod.danawa.com/info/?pcode=30131198">
-                <div class="thumbnail">
-                  <img src="image/test1.png" />
-                </div>
-                <div class="description">
-                  <strong>사이버펑크 2077</strong>
-                  <p>출시일 : 2023.12.05</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://prod.danawa.com/info/?pcode=29343281">
-                <div class="thumbnail">
-                  <img src="image/test2.png" />
-                </div>
-                <div class="description">
-                  <strong>풋볼매니저</strong>
-                  <p>출시일 : 2023.12.07</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://prod.danawa.com/info/?pcode=30271286">
-                <div class="thumbnail">
-                  <img src="image/test3.png" />
-                </div>
-                <div class="description">
-                  <strong>고스트러너</strong>
-                  <p>출시일 : 2023.12.13</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="https://prod.danawa.com/info/?pcode=30300869">
-                <div class="thumbnail">
-                  <img src="image/test4.png" />
-                </div>
-                <div class="description">
-                  <strong>발더스 게이트</strong>
-                  <p>출시일 : 2023.12.21</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="tab_item">
-          <ul>
-            <li class="item">
-              <a href="#">
-                <div class="thumbnail">
-                  <img src="image/ex1.png" />
-                </div>
-                <div class="description">
-                  <strong>아바타</strong>
-                  <p>입고일 : 2023.12.06</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#">
-                <div class="thumbnail">
-                  <img src="image/ex1.png" />
-                </div>
-                <div class="description">
-                  <strong>아바타 골드에디션</strong>
-                  <p>입고일 : 2023.12.08</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#">
-                <div class="thumbnail">
-                  <img src="image/ex1.png" />
-                </div>
-                <div class="description">
-                  <strong>아바타 얼티밋에디션</strong>
-                  <p>입고일 : 2023.12.11</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
     </div>
     <footer id="main_footer">
       <img src="image/F1.png" alt="" />
@@ -545,6 +428,7 @@
       <h3>Copyright by Hyeon-gi Choi.</h3>
       <address>For more information, contact schentea@gmail.com</address>
     </footer>
+    <script src="carousel.js"></script>
     <script
       src="https://kit.fontawesome.com/f5abf61b8c.js"
       crossorigin="anonymous"
