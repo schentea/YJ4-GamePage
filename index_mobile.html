@@ -3,7 +3,10 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>G-Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
         <style>
             * {
                 margin : 0;
@@ -15,9 +18,11 @@
             li {
                 list-style: none;
             }
+            
             a {
                 text-decoration: none;
             }
+
         </style>
         <style>
             #main_header{
@@ -52,41 +57,74 @@
                 background-position: 0px 0px;
                 text-indent: -99999px;
             }
-            #main_header > label.right {
-                background: url('image/sprites.png');
-                background-position: -62px 0px;
-                text-indent: -99999px;
-            }
         </style>
+        
         <style>
-            #toggle {display: none;}
-            #toggle + #wrap > #toggle_gnb_wrap {display: none;}
-            #toggle:checked + #wrap > #toggle_gnb_wrap {display: block;}
-
-            #toggle_gnb_wrap {
-                background: #363636;
-                padding : 15px;
+            #game {
+                margin-top: 100px;
             }
-            #toggle_gnb{
-                background: #FFFFFF;
-                padding: 5px;
-            }
-
-            #toggle_gnb > ul { overflow : hidden;}
-            #toggle_gnb > ul > li {
-                width: 18%;
-                padding: 2px;
+            #game h1 {
                 text-align: center;
-                float: left;
+                margin-bottom: 10px;
+                font-size: 30px;
+                background-color:rgb(214, 212, 212) ;
             }
-            #toggle_gnb > ul:first-child { 
-                margin-left: 5px;
+            #game .recom {
+                font-family: 'Black Han Sans', sans-serif;
+                margin-bottom: 50px;
             }
-            #toggle_gnb > ul > li:nth-child(3) {
-                padding-left: 10px;
+            #game .recom p {
+                margin-top: 20px;
             }
-        </style>
-        <style> 
+            #game .recom img {
+                width: 100%;
+                height: 300px;
+            }
+            #review h1 {
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 30px;
+                background-color:rgb(214, 212, 212) ;
+            }
+            .gameRe {
+                margin-bottom: 50px;
+                font-family: 'Black Han Sans', sans-serif;
+
+            }
+            .gameRe img {
+                width: 100%;
+                height: 300px;
+            }
+            .gameRe .advan {
+                margin-top: 10px;
+                margin-bottom: 8px;
+               
+            }
+            .gameRe > ul > li {
+                margin-left: 8px;
+                line-height: 1.7;
+                
+            }
+            #gallery h1 {
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 20px;
+                background-color: rgb(214, 212, 212);
+            }
+            #gallery .gal {
+                text-align: center;
+                margin-bottom: 15px;
+                font-family: 'Black Han Sans', sans-serif;
+                height: 230px;
+                background-color: rgb(214, 212, 212);
+            }
+            #gallery .gal p {
+                margin-top: 5px;
+            }
+            #gallery .gal img{
+                width: 100%;
+                height: 200px;
+            }
             #top_gnb {
                 overflow: hidden;
                 border-bottom: 2px solid black;
@@ -94,8 +132,7 @@
             }
             #top_gnb > div > a {
                 float : left;
-                width : 25%;
-
+                width : 33%;
                 height :35px;
                 line-height: 35px;
                 text-align: center;
@@ -138,50 +175,140 @@
         <style>
             #main_footer {
                 padding : 10px;
+                background-color: rgb(214, 212, 212);
                 border-top: 3px solid black;
                 text-align: center;
             }
         </style>
     </head>
     <body>
-        <input id = "toggle" type ="checkbox" />
         <div id = "wrap">
             <header id ="main_header">
                 <a class="left" href="#">Main</a>
-                <h1>Moblie</h1>
-                <label class="right" for="toggle" onclick="">Toggle</label>
+                <h1>G-Review</h1>
             </header>
-            <div id ="toggle_gnb_wrap">
-                <div id ="toggle_gnb">
-                    <ul>
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
-                        <li><a href="#">장바구니</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">설문조사</a></li>
-                    </ul>
-                </div>
-            </div>
             <nav id="top_gnb">
-                <div><a href="#">PS5</a></div>
-                <div><a href="#">XBOX Series</a></div>
-                <div><a href="#">SWITCH</a></div>
-                <div><a href="#">PC</a></div>
+                <div><a href="#review">리뷰</a></div>
+                <div><a href="#gallery">갤러리</a></div>
+                <div><a href="#game">추천게임</a></div>
             </nav>
             <section id ="main_section">
-                <header id =section_header>
-                    <h1>Lorem ipsum</h1>
-                    <time>2012-12-09 - Birthday</time>
-                </header>
                 <article id ="section_article">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem officia similique eveniet ex eligendi ea explicabo temporibus, qui vero magni ullam facere ipsum suscipit unde perspiciatis deserunt in minima a.</p>
-                    <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos impedit, earum nostrum inventore, cum illum, excepturi libero sit distinctio molestiae quae velit deserunt perspiciatis est labore assumenda sunt incidunt eveniet.</p>
-                    <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla quo adipisci tempore eius possimus, sint error amet facere dignissimos blanditiis similique quod accusantium expedita illum reprehenderit tenetur alias vitae.</p>
+                    <div id ="review">
+                        <h1>Review</h1>
+                        <div class="gameRe">
+                            <h2 style="font-size: 23px;">SID MEIER'S CIVILIZATION VI</h2>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs"></i>
+                            <img src="./image/ex2.png" alt="">
+                            <ul><p class="advan">게임의 장단점</p>
+                                <li>1. 전작에 비해 게임 플레이의 다양화 시도</li>
+                                <li>2. 생각해야할 요소가 늘어나며 게임의 재미 증가</li>
+                                <li>3. 싱글플레이시 AI의 행동패턴이 많이 기이하다.</li>
+                                <li>4. 각 문명과 지도자들 사이의 밸런스가 심각하다.</li>
+                            </ul>
+                        </div>
+                        <div class="gameRe">
+                            <h2>Escape form TarKov</h2>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs"></i>
+                            <img src="image/Tarex1.png" />
+                            <ul><p class="advan">게임의 장단점</p>
+                                <li>1. 충분한 고증과 현실적인 사운드</li>
+                                <li>2. 명확한 목표가 있는 플레이</li>
+                                <li>3. 불법 프로그램 사용자가 다수 존재</li>
+                                <li>4. 완성도 자체는 높으나 자잘한 버그 다수 존재</li>
+                            </ul>
+                        </div>
+                        <div class="gameRe">
+                            <h2>THE WITCHER III: Wild Hunt</h2>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <i class="fa-solid fa-star fa-2xs" style="color: #ffa500"></i>
+                            <img src="image/witcher.png" />
+                            <ul><p class="advan">게임의 장단점</p>
+                                <li>1. 높은 퀄리티의 스토리</li>
+                                <li>2. 유저 스스로 만들어가는 이야기</li>
+                                <li>3. 적에 종류에 따른 공략법</li>
+                                <li>4. 적응하기 힘든 전투모션, 오토타겟팅 시스템</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id ="gallery">
+                        <div>
+                            <h1>Gallery</h1>
+                            <div class="gal">
+                                <img src="image/civex1.png" />
+                                <img src="image/cvex2.png" />
+                                <img src="image/cvex3.png" />
+                                <img src="image/cvex4.png" />
+                                <img src="image/cvex5.png" />
+                                <img src="image/cvex6.png" />
+                                <p>문명 6</p>
+                            </div>
+                            <div class="gal">
+                                <img src="image/tarex2.png" alt="" />
+                                <img src="image/tarex3.png" />
+                                <img src="image/tarex4.png" />
+                                <img src="image/tarex5.png" />
+                                <img src="image/tarex6.png" />
+                                <img src="image/tarex7.png" />
+                                <p>Escape From Tarkov</p>
+                            </div>
+                            <div class="gal">
+                                <img src="image/w1.jpg" class="active" />
+                                <img src="image/w2.jpg" />
+                                <img src="image/w3.jpg" />
+                                <img src="image/w4.jpg" />
+                                <img src="image/w5.jpg" />
+                                <img src="image/w6.jpg" />
+                                <img src="image/tarex7.png" />
+                                <p>위쳐3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id ="game">
+                        <div>
+                            <h1>Recommend</h1>
+                            <div class="recom">
+                                <img src="./image/San.png" alt="">
+                                <p></p>
+                                  이름 : 산나비<br>
+                                  출시일 : 2023.11.09<br>
+                                  가격 : 15,500원<br>
+                                  사용자 평가 : 압도적으로 긍정적
+                                </p>
+                            </div>
+                            <div class="recom">
+                                <img src="./image/thefinals.png" alt="">
+                                <p>
+                                  이름 : THE FINALS<br>
+                                  출시일 : 2023.12.08<br>
+                                  가격 : 무료<br>
+                                  사용자 평가 : 대체로 긍정적
+                                </p>
+                              </div>
+                        </div>
+                    </div>
                 </article>
             </section>
-            
         </div>
+        <footer id="main_footer">
+            <h3>Copyright by Hyeon-gi Choi.</h3>
+            <address>For more information, contact schentea@gmail.com</address>
+          </footer>
+        <script src="carousel.js"></script>
+        <script
+      src="https://kit.fontawesome.com/f5abf61b8c.js"
+      crossorigin="anonymous"
+    ></script>
     </body>
 </html>

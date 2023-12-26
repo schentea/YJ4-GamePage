@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter5</title>
+    <title>G-Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <!-- 기본 -->
     <style>
       @font-face {
@@ -45,7 +48,7 @@
         width: 100%;
         margin: 0 auto;
         height: 160px;
-        background-color: aliceblue;
+        background-color: rgb(243, 243, 243);
         position: relative;
         font-family: "IAMAPLAYER";
         src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2")
@@ -84,7 +87,8 @@
         margin-bottom: 20px;
       }
       #main_lnb > ul > li {
-        font-size: 28px;
+        font-family: 'Black Han Sans', sans-serif;
+        font-size: 32px;
         text-align: center;
         width: 200px;
         float: left;
@@ -93,7 +97,6 @@
       #main_lnb > ul > li > a {
         display: block;
         padding: 10px 20px;
-        font-weight: bold;
       }
       #main_lnb > ul > li > a:hover {
         background: black;
@@ -122,6 +125,7 @@
         font-family: "bitbit";
         src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
           url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
+        margin : 0 auto;
       }
 
       #main_section .main_article1 h1 {
@@ -167,7 +171,7 @@
         z-index: 1;
       }
       #main_section .main_article1 .main_div div:first-child img:hover {
-        opacity: 0.3;
+        opacity: 0.5;
       }
       #main_section
         .main_article1
@@ -203,47 +207,95 @@
         text-align: center;
         margin-top: 70px;
       }
-      #main_section #main_article2 .gal {
-        border: 1px solid black;
+      #main_section .main_article2 #gall {
         width: 100%;
-        height: 320px;
-        overflow: hidden;
-        margin-top: 160px;
-        position: relative;
+        background-color:rgb(243, 243, 243);
+        
       }
-      #main_section #main_article2 .gal p {
+      #main_section .main_article2 #gall h1 {
+        padding-top: 50px;
+        text-align: center;
+        font-size: 42px;
+        
+      }
+      #main_section .main_article2 .gal {
+        width: 30%;
+        height: 410px;
+        overflow: hidden;
+        margin-top: 50px;
+        display: flex;
+        display: inline-block;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         margin-bottom: 30px;
+        margin-left: 40px;
+        background-color: rgb(216, 216, 216);
+      }
+      #main_section .main_article2 .gal p {
         text-align: center;
         font-size: xx-large;
         font-weight: bold;
       }
-      #main_section #main_article2 .gal img {
-        margin-right: 20px;
-        width: 350px;
-        height: 210px;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        position: absolute;
-        z-index: 1;
+      #main_section .main_article2 .gal img {
+        width: 100%;
+        height: 360px;
+        margin-right: 0;
+        margin : 0 auto;
       }
-      #main_section #main_article2 .gal img.active {
-        opacity: 1;
+      #main_section .main_article3 #recommend {
+        margin-top: 130px;
+        width: 100%;
+        height: 600px;
+        background-color: rgb(243, 243, 243);
+        text-align: center;
+        padding-top: 30px;
+        font-size: 42px;
       }
-      #prevBtn,
-      #nextBtn {
+      #main_section .main_article3 #recommend #thisMonth .recom{
+        display: inline-block;
+      }
+      #main_section .main_article3 #recommend #thisMonth .recom2 {
+        position: relative;
+      }
+      #main_section .main_article3 #recommend #thisMonth .recom2 p {
+        text-align: center;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        font-size: 20px;
-        cursor: pointer;
-        z-index: 3;
-        background-color: transparent;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 28px;
+        transition: opacity 0.3s;
+        opacity: 0;
+        width: 700px;
+        height: 460px;
+        margin-top: 14px;
+        background-color: rgba(0, 0, 0, 0.5); 
+        line-height: 1.5;
+        
       }
-      #prevBtn {
-        left: 10px;
+      #main_section .main_article3 #recommend #thisMonth .recom2:hover p {
+        opacity: 1;
       }
-      #nextBtn {
-        right: 10px;
+      #main_section .main_article3 #recommend #thisMonth .recom2 img {
+        width: 700px;
+        height: 460px;
+        margin-top: 40px;
+      }
+      #main_section .main_article3 #recommend #thisMonth .recom:nth-child(1) {
+        float: left;
+        width: 50%;
+        height: 700px;
+        
+      }
+      #main_section .main_article3 #recommend #thisMonth .recom:nth-child(2) {
+        float: right;
+        width: 50%;
+        height: 700px;
+      }
+      .main_article3 {
+        font-family: 'Black Han Sans', sans-serif;
       }
     </style>
     <!-- 푸터 -->
@@ -256,7 +308,7 @@
         padding: 10px;
         opacity: 0.8;
         text-align: center;
-        background-color: azure;
+        background-color: rgb(233, 233, 233);
       }
       #main_footer img {
         width: 100px;
@@ -279,7 +331,7 @@
     </header>
     <div id="content">
       <section id="main_section">
-        <article class="main_article1">
+        <article class="main_article1" id="review">
           <div class="main_div">
             <div>
               <img src="image/ex2.png" />
@@ -385,46 +437,73 @@
             </div>
           </div>
         </article>
-        <article id="main_article2">
-          <div class="gal">
-            <p>문명 6</p>
-            <img src="image/civex1.png" />
-            <img src="image/cvex2.png" />
-            <img src="image/cvex3.png" />
-            <img src="image/cvex4.png" />
-            <img src="image/cvex5.png" />
-            <img src="image/cvex6.png" />
-          </div>
-          <div class="gal">
-            <p>Escape From Tarkov</p>
-            <img src="image/tarex2.png" alt="" />
-            <img src="image/tarex3.png" />
-            <img src="image/tarex4.png" />
-            <img src="image/tarex5.png" />
-            <img src="image/tarex6.png" />
-            <img src="image/tarex7.png" />
-          </div>
-          <div class="gal">
-            <p>위쳐3</p>
-            <img src="image/w1.jpg" class="active" />
-            <img src="image/w2.jpg" />
-            <img src="image/w3.jpg" />
-            <img src="image/w4.jpg" />
-            <img src="image/w5.jpg" />
-            <img src="image/w6.jpg" />
-            <img src="image/tarex7.png" />
-            <div id="prevBtn" onclick="changeSlide(-1)">&#10094;</div>
-            <div id="nextBtn" onclick="changeSlide(1)">&#10095;</div>
+        <article class="main_article2" id="gallery">
+          <div id="gall">
+            <h1>Gallery</h1>
+            <div class="gal">
+              <img src="image/civex1.png" />
+              <img src="image/cvex2.png" />
+              <img src="image/cvex3.png" />
+              <img src="image/cvex4.png" />
+              <img src="image/cvex5.png" />
+              <img src="image/cvex6.png" />
+              <p>문명 6</p>
+            </div>
+            <div class="gal">
+              <img src="image/tarex2.png" alt="" />
+              <img src="image/tarex3.png" />
+              <img src="image/tarex4.png" />
+              <img src="image/tarex5.png" />
+              <img src="image/tarex6.png" />
+              <img src="image/tarex7.png" />
+              <p>Escape From Tarkov</p>
+            </div>
+            <div class="gal">
+              <img src="image/w1.jpg" class="active" />
+              <img src="image/w2.jpg" />
+              <img src="image/w3.jpg" />
+              <img src="image/w4.jpg" />
+              <img src="image/w5.jpg" />
+              <img src="image/w6.jpg" />
+              <img src="image/tarex7.png" />
+              <p>위쳐3</p>
+            </div>
           </div>
         </article>
-        <article id="main_article3">
-          <div></div>
+        <article class="main_article3" id="game">
+          <div id="recommend">
+            <p>추천 게임</p>
+            <div id="thisMonth">
+              <div class="recom">
+                <div class="recom2">
+                  <img src="./image/San.png" alt="">
+                  <p>
+                    <br><br><br>
+                    이름 : 산나비<br>
+                    출시일 : 2023.11.09<br>
+                    가격 : 15,500원<br>
+                    사용자 평가 : 압도적으로 긍정적
+                  </p>
+                </div>
+              </div>
+              <div class="recom">
+                <div class="recom2">
+                  <img src="./image/thefinals.png" alt="">
+                  <p>
+                    <br><br><br>
+                    이름 : THE FINALS<br>
+                    출시일 : 2023.12.08<br>
+                    가격 : 무료<br>
+                    사용자 평가 : 대체로 긍정적
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </div>
     <footer id="main_footer">
-      <img src="image/F1.png" alt="" />
-      <img src="image/F2.png" alt="" />
       <h3>Copyright by Hyeon-gi Choi.</h3>
       <address>For more information, contact schentea@gmail.com</address>
     </footer>
